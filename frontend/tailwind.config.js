@@ -2,7 +2,18 @@
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-blue-1': '#003cc1',
+        'custom-blue-2': '#001e5e',
+        'custom-blue-3': '#01319d',
+        'custom-blue-4': '#002880',
+        'accent-blue': '#728daf'
+      },
+      fontFamily: {
+        lora: ['Lora', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
