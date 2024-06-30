@@ -21,19 +21,19 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-10">
             <a
               href="#mission"
-              className="font-lora text-custom-blue-1 hover:text-gray-400"
+              className="font-lora text-custom-blue-1 hover:text-gray-400 text-lg"
             >
               Mission
             </a>
             <a
               href="#about"
-              className="font-lora text-custom-blue-1 hover:text-gray-400"
+              className="font-lora text-custom-blue-1 hover:text-gray-400 text-lg"
             >
               About
             </a>
             <a
               href="#contact"
-              className="font-lora text-custom-blue-1 hover:text-gray-400"
+              className="font-lora text-custom-blue-1 hover:text-gray-400 text-lg"
             >
               Contact
             </a>
