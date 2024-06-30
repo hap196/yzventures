@@ -9,9 +9,7 @@ function App() {
   return (
     <div className="relative bg-gray-900">
       <Navbar />
-      <div className="mt-8">
-        <InteractiveLogo />
-      </div>
+      <InteractiveLogo />
       <Header />
       <About />
       <Contact />

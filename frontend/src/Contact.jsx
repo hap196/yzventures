@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="flex justify-center items-center my-40">
+      <div className="flex justify-center items-center py-40 bg-gray-900">
         <a
           href="https://airtable.com/appIqybHNdQCLdf41/shrSpqTrmw8KANvBr"
           target="_blank"
