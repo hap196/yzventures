@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
       <div className="flex justify-center items-center max-w-4xl h-full mx-auto mt-20 md:mt-24 mb-20 md:mb-40">
-        <p className="font-lora text-accent-blue text-md text-center max-w-96">
+        <p className="font-lora text-gray-400 text-md text-center max-w-96">
           Y&Z Ventures is a Los Angeles based multi-family office, operating as
           a direct investment vehicle + fund of funds. We are dedicated to
           supporting investments to the final stages, or the end game. Through
@@ -18,11 +18,11 @@ const About = () => {
         </p>
       </div>
       <div className="mx-10 md:mx-20 mt-20 mb-20">
-        <h2 className="text-center font-lora text-custom-blue-1 text-2xl md:text-4xl mb-10">
+        <h2 className="text-center font-lora text-gray-300 text-2xl md:text-4xl mb-10">
           Partner Industries
         </h2>
-        <div className="max-w-3xl font-lora text-lg mx-auto grid grid-cols-1 gap-10 text-custom-blue-1 border-custom-blue-1 border-t border-b pt-10 pb-10 md:grid-cols-2 mb-20">
-          <div className="text-center md:border-r border-custom-blue-1">
+        <div className="max-w-3xl font-lora text-lg mx-auto grid grid-cols-1 gap-10 text-gray-300 border-gray-400 border-t border-b pt-10 pb-10 md:grid-cols-2 mb-20">
+          <div className="text-center md:border-r border-gray-400">
             <ul>
               <li>Agriculture</li>
               <li>Education</li>

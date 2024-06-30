@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-gray-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -21,19 +21,19 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-10">
             <a
               href="#mission"
-              className="font-lora text-custom-blue-1 hover:text-gray-400 text-lg"
+              className="font-lora text-gray-300 hover:text-gray-400 text-lg"
             >
               Mission
             </a>
             <a
               href="#about"
-              className="font-lora text-custom-blue-1 hover:text-gray-400 text-lg"
+              className="font-lora text-gray-300 hover:text-gray-400 text-lg"
             >
               About
             </a>
             <a
               href="#contact"
-              className="font-lora text-custom-blue-1 hover:text-gray-400 text-lg"
+              className="font-lora text-gray-300 hover:text-gray-400 text-lg"
             >
               Contact
             </a>
@@ -42,7 +42,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className=" inline-flex items-center justify-center p-2 rounded-md text-custom-blue-1 hover:text-accent-blue focus:outline-none focus:text-accent-blue"
+              className=" inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-accent-blue focus:outline-none focus:text-accent-blue"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (

@@ -1,29 +1,23 @@
-
-.relative {
-    position: relative;
-}
-
-.bg-gray-900 {
-    background-color: #1a202c;
-}
-
-.logo-container {
-    position: relative;
-    width: 24rem;
-    height: 24rem;
+.logo-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo-container {
     perspective: 1000px;
     transform-style: preserve-3d;
     transition: transform 0.2s ease-out;
+    width: 3rem; /* Adjusted for smaller size */
+    height: 3rem; /* Adjusted for smaller size */
 }
 
 .logo-square {
     position: absolute;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 1rem;
+    width: 3rem; /* Adjusted for smaller size */
+    height: 3rem; /* Adjusted for smaller size */
+    border-radius: 0.25rem; /* Adjusted for smaller size */
     transition: transform 0.2s ease-out;
     transform-style: preserve-3d;
 }
@@ -33,39 +27,39 @@
     width: 100%;
     height: 100%;
     background-color: inherit;
-    border-radius: 1rem;
+    border-radius: 0.25rem; /* Adjusted for smaller size */
 }
 
 .side-top {
-    transform: rotateX(90deg) translateZ(5rem);
+    transform: rotateX(90deg) translateZ(1.5rem);
 }
 
 .side-right {
-    transform: rotateY(90deg) translateZ(5rem);
+    transform: rotateY(90deg) translateZ(1.5rem);
 }
 
 .side-bottom {
-    transform: rotateX(-90deg) translateZ(5rem);
+    transform: rotateX(-90deg) translateZ(1.5rem);
 }
 
 .side-left {
-    transform: rotateY(-90deg) translateZ(5rem);
+    transform: rotateY(-90deg) translateZ(1.5rem);
 }
 
 .top-left {
-    transform: rotate(45deg) translate(-5.5rem, -5.5rem);
+    transform: rotate(45deg) translate(-1.75rem, -1.75rem);
 }
 
 .top-right {
-    transform: rotate(45deg) translate(5.5rem, -5.5rem);
+    transform: rotate(45deg) translate(1.75rem, -1.75rem);
 }
 
 .bottom-left {
-    transform: rotate(45deg) translate(-5.5rem, 5.5rem);
+    transform: rotate(45deg) translate(-1.75rem, 1.75rem);
 }
 
 .bottom-right {
-    transform: rotate(45deg) translate(5.5rem, 5.5rem);
+    transform: rotate(45deg) translate(1.75rem, 1.75rem);
 }
 
 .custom-blue-1 {

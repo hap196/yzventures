@@ -23,11 +23,8 @@ const InteractiveLogo = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden flex justify-center items-center bg-gray-900">
-      <div
-        ref={logoRef}
-        className="logo-container"
-      >
+    <div className="logo-wrapper flex justify-center items-center mt-24">
+      <div ref={logoRef} className="logo-container">
         <div className="logo-square top-left custom-blue-1">
           <div className="side side-top"></div>
           <div className="side side-right"></div>

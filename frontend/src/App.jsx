@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import Header from "./Header";
@@ -7,16 +6,16 @@ import Contact from "./Contact";
 import InteractiveLogo from "./InteractiveLogo";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <div className="relative bg-gray-900">
       <Navbar />
-      <InteractiveLogo />
+      <div className="mt-8">
+        <InteractiveLogo />
+      </div>
       <Header />
       <About />
       <Contact />
-    </>
+    </div>
   );
 }
 

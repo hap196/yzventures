@@ -8,6 +8,7 @@ export default {
         'custom-blue-2': '#001e5e',
         'custom-blue-3': '#01319d',
         'custom-blue-4': '#002880',
+        'custom-blue-5': '#0e2452',
         'accent-blue': '#728daf'
       },
       fontFamily: {
