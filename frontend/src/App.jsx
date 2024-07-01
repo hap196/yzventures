@@ -11,21 +11,22 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="relative bg-gradient-gray-blue">
-      <ParticleEffect />
-      <div className="text-gray-300 p-4 relative z-10">
+      {/* <ParticleEffect /> */}
+      <div className="text-gray-300 relative z-10">
+        <div className="absolute top-0 bottom-0 left-24 w-px bg-gray-400 opacity-30"></div>
+        <div className="absolute top-0 bottom-0 right-24 w-px bg-gray-400 opacity-30"></div>
+        <div className="relative">
         <Navbar />
-        <section id="home">
-          <InteractiveLogo />
-        </section>
-        <section id="mission">
-          <Header />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
+          <section id="home">
+            <Header />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+        </div>
         <Footer />
       </div>
     </div>

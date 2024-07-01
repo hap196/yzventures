@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo from "./assets/logo_nowords.png";
 import "./assets/yz_logo.png";
+import InteractiveLogo from "./InteractiveLogo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +38,8 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed w-full z-10 top-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 py-4">
+    <nav className="z-20 w-screen top-0 border-b border-gray-400 border-opacity-30">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-4 py-2">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">

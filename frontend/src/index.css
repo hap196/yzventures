@@ -26,7 +26,7 @@
 }
 
 .animate-floatUp {
-  animation: floatUp 1s ease-out forwards;
+  animation: floatUp 1.5s ease-out forwards;
 }
 
 .animate-floatUp-delay-1 {
@@ -72,3 +72,34 @@ html {
 .expand-border-vertical {
   animation: expandBorderVertical 1s ease-out forwards;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in-longer {
+  animation: fadeIn 4s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
