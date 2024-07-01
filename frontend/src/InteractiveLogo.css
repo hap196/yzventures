@@ -1,3 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 .logo-wrapper {
     width: 100%;
     display: flex;
@@ -20,6 +24,7 @@
     border-radius: 0.25rem;
     transition: transform 0.2s ease-out;
     transform-style: preserve-3d;
+    box-shadow: 0 20px 22px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.394);
 }
 
 .side {
@@ -63,19 +68,19 @@
 }
 
 .custom-blue-1 {
-    background-color: #003cc1;
+    background-color: #0146dc;
 }
 
 .custom-blue-2 {
-    background-color: #001e5e;
+    background-color: #002981;
 }
 
 .custom-blue-3 {
-    background-color: #01319d;
+    background-color: #0838a8;
 }
 
 .custom-blue-4 {
-    background-color: #002880;
+    background-color: #02339e;
 }
 
 .transition-transform {

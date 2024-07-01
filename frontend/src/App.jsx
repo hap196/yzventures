@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import InteractiveLogo from "./InteractiveLogo";
 import ParticleEffect from "./ParticleEffect";
 import "./App.css";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <section id="contact">
           <Contact />
         </section>
+        <Footer />
       </div>
     </div>
   );

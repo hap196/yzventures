@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import Counter from "./Counter";
 
 const Header = () => {
   const headersRef = useRef([]);
   const statsRef = useRef([]);
+  const commonDuration = 2000; // Common duration for all counters in milliseconds
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,22 +43,22 @@ const Header = () => {
       <div className="mt-20 mb-20 mx-10 md:mt-20 md:mb-20 md:mx-20">
         <h1
           ref={(el) => (headersRef.current[0] = el)}
-          className="font-lora text-gray-300 text-center text-4xl md:text-5xl opacity-0"
+          className="font-lora text-gray-200 text-center text-4xl md:text-5xl opacity-0 mb-4"
         >
           Where capital investment
         </h1>
         <h1
           ref={(el) => (headersRef.current[1] = el)}
-          className="font-lora text-gray-300 text-center text-4xl md:text-5xl opacity-0"
+          className="font-lora text-gray-200 text-center text-4xl md:text-5xl opacity-0 mb-24"
         >
-          has community impact.
+          has <span className="text-accent-blue">community impact</span>.
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-10 mb-24 mx-10 md:mx-20">
+      <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-28 mb-10 mx-10 md:mx-20">
         <div className="w-full max-w-48 text-center">
           <div ref={(el) => (statsRef.current[0] = el)} className="opacity-0">
-            <h2 className="font-lora text-gray-300 text-5xl md:text-7xl mb-4">
-              37
+            <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
+              <Counter target={25} duration={commonDuration} />
             </h2>
             <h2 className="font-lora text-gray-400 text-md">
               countries our investors are based in
@@ -65,8 +67,8 @@ const Header = () => {
         </div>
         <div className="w-full max-w-48 text-center">
           <div ref={(el) => (statsRef.current[1] = el)} className="opacity-0">
-            <h2 className="font-lora text-gray-300 text-5xl md:text-7xl mb-4">
-              240
+            <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
+              <Counter target={30} duration={commonDuration} />
             </h2>
             <h2 className="font-lora text-gray-400 text-md">
               industry-leading investors in our funds
@@ -75,8 +77,8 @@ const Header = () => {
         </div>
         <div className="w-full max-w-48 text-center">
           <div ref={(el) => (statsRef.current[2] = el)} className="opacity-0">
-            <h2 className="font-lora text-gray-300 text-5xl md:text-7xl mb-4">
-              1.2M
+            <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
+              <Counter target={200} duration={commonDuration} />
             </h2>
             <h2 className="font-lora text-gray-400 text-md">
               people employed by our investors' brands

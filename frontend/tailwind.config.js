@@ -9,7 +9,7 @@ export default {
         'custom-blue-3': '#01319d',
         'custom-blue-4': '#002880',
         'custom-blue-5': '#0e2452',
-        'accent-blue': '#728daf'
+        'accent-blue': '#6795c9'
       },
       fontFamily: {
         lora: ['Lora', 'serif'],

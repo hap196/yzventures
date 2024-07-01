@@ -12,7 +12,7 @@ const Particle = ({ x, y, size, color, animationDuration, mouseX, mouseY }) => {
     position: "absolute",
     animation: `float ${animationDuration}s ease-in-out infinite`,
     opacity: 0.7, 
-    filter: "blur(2px)", 
+    filter: "blur(1px)", 
   };
 
   return <div style={styles}></div>;

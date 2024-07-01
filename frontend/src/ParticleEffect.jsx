@@ -14,7 +14,7 @@ const ParticleEffect = () => {
       for (let i = 0; i < 100; i++) {
         const x = Math.random() * window.innerWidth;
         const y = Math.random() * window.innerHeight;
-        const size = Math.random() * 10 + 5;
+        const size = Math.random() * 5 + 5;
         const color = colors[Math.floor(Math.random() * colors.length)];
         const animationDuration = Math.random() * 3 + 2; 
         particlesArray.push({ x, y, size, color, animationDuration });
