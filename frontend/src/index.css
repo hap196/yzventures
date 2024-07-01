@@ -14,10 +14,6 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 @keyframes floatUp {
   from {
     transform: translateY(50px);
@@ -31,4 +27,48 @@ html {
 
 .animate-floatUp {
   animation: floatUp 1s ease-out forwards;
+}
+
+.animate-floatUp-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-floatUp-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-floatUp-delay-3 {
+  animation-delay: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes expandBorder {
+  from {
+    border-width: 0 0 0 0;
+  }
+  to {
+    border-width: 0 2px 2px 2px;
+  }
+}
+
+.expand-border {
+  animation: expandBorder 1s ease-out forwards;
+}
+
+@keyframes expandBorderVertical {
+  from {
+    border-top-width: 0;
+    border-bottom-width: 0;
+  }
+  to {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+}
+
+.expand-border-vertical {
+  animation: expandBorderVertical 1s ease-out forwards;
 }
