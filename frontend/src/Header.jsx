@@ -16,25 +16,25 @@ const Header = () => {
           <h2 className="font-lora text-gray-300 text-5xl md:text-7xl mb-4">
             37
           </h2>
-          <h2 className="font-lora text-gray-400 text-md">
+          <h3 className="font-lora text-gray-400 text-md">
             countries our investors are based in
-          </h2>
+          </h3>
         </div>
         <div className="w-full max-w-48 text-center">
           <h2 className="font-lora text-gray-300 text-5xl md:text-7xl mb-4">
             240
           </h2>
-          <h2 className="font-lora text-gray-400 text-md">
+          <h3 className="font-lora text-gray-400 text-md">
             industry-leading investors in our funds
-          </h2>
+          </h3>
         </div>
         <div className="w-full max-w-48 text-center">
           <h2 className="font-lora text-gray-300 text-5xl md:text-7xl mb-4">
             1.2M
           </h2>
-          <h2 className="font-lora text-gray-400 text-md">
+          <h3 className="font-lora text-gray-400 text-md">
             people employed by our investors' brands
-          </h2>
+          </h3>
         </div>
       </div>
     </>
