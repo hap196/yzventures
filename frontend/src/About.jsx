@@ -3,7 +3,7 @@ import circle1 from "./assets/circle1.png";
 import circle2 from "./assets/circle2.png";
 import circle3 from "./assets/circle3.png";
 import Points from "./Points.jsx";
-import map from "./assets/us_dot_map.png"
+import map from "./assets/us_dot_map.png";
 
 const About = () => {
   const elementsRef = useRef([]);
@@ -42,14 +42,19 @@ const About = () => {
           ref={(el) => elementsRef.current.push(el)}
           className="font-lora text-gray-400 text-lg text-left mr-6 max-w-xl opacity-0"
         >
-          Y&Z Ventures is a Los Angeles based <span className="text-accent-blue font-bold">multi-family office</span>, operating as
-          a direct investment vehicle + fund of funds. We are dedicated to 
-          <span className="text-accent-blue font-bold"> supporting investments to the final stages</span>, or the end game. Through
-          our established network of M&A professionals across finance, tax, and
-          legal, we support our portfolio investments through buy-side and
-          sell-side exploration.
+          Y&Z Ventures is a Los Angeles based{" "}
+          <span className="text-accent-blue font-bold">
+            multi-family office
+          </span>
+          , operating as a direct investment vehicle + fund of funds. We are
+          dedicated to
+          <span className="text-accent-blue font-bold">
+            {" "}
+            supporting investments to the final stages
+          </span>
+          , or the end game.
         </p>
-        <img src={map} className="w-64 ml-6 fade-in-longer"/>
+        <img src={map} className="w-64 ml-6 fade-in-longer" />
       </div>
       <div className="mx-10 md:mx-20 mt-20 mb-20">
         <h2
