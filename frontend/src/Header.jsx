@@ -9,15 +9,17 @@ const Header = () => {
   const commonDuration = 2000; // Common duration for all counters in milliseconds
 
   const phrases = [
-    "Representing HNWI",
-    "Unique Expertise in M&A",
-    "Consistent Deal Flow",
+    "Unique Expertise and Network in M&A",
+    "Represent Successful Operators",
+    "Support Community",
+    "Ensure Investors Create Value"
   ];
 
   const subPhrases = [
-    "Our investors consist of influential families and private foundations.",
-    "Y&Z is dedicated to supporting investments to the final stages, or Y&Z",
-    "We have an established deal flow through our investor network",
+    "Y&Z is dedicated to supporting investments to the final stages, or the Y&Z.",
+    "Y&Z invests on behalf of successful operators across legacy sectors.",
+    "Y&Z invests on behalf of first generation and immigrant entrepreneurial families",
+    "Y&Z invests in industries where our investors offer a unique expertise (see partner industries)"
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
