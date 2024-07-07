@@ -63,7 +63,7 @@ const About = () => {
         >
           Partner Industries
         </h2>
-        <div className="max-w-6xl font-lora text-lg mx-auto grid grid-cols-1 gap-10 text-gray-300 border-gray-400 border-t border-b pt-10 pb-10 md:grid-cols-2 mb-20">
+        <div className="max-w-6xl font-lora text-lg mx-auto grid grid-cols-1 gap-10 text-gray-300 border-gray-400 border-t border-b pt-10 pb-10 md:grid-cols-3 mb-20">
           <div
             ref={(el) => elementsRef.current.push(el)}
             className="text-center md:border-r border-gray-400 opacity-0"
@@ -72,7 +72,18 @@ const About = () => {
               <li>Agriculture</li>
               <li>Education</li>
               <li>Healthcare</li>
+              <li>Home Services</li>
+            </ul>
+          </div>
+          <div
+            ref={(el) => elementsRef.current.push(el)}
+            className="text-center md:border-r border-gray-400 opacity-0"
+          >
+            <ul>
+              <li>Legal</li>
               <li>Logistics</li>
+              <li>Manufacturing</li>
+              <li>Marketplaces</li>
             </ul>
           </div>
           <div
@@ -80,9 +91,10 @@ const About = () => {
             className="text-center opacity-0"
           >
             <ul>
+              <li>Mobility</li>
+              <li>Production</li>
               <li>Real Estate</li>
               <li>Supply Chain</li>
-              <li>Transportation</li>
             </ul>
           </div>
         </div>
