@@ -91,35 +91,40 @@ const Header = () => {
         <div className="w-full max-w-48 text-center">
           <div ref={(el) => (statsRef.current[0] = el)} className="opacity-0">
             <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-              <Counter target={25} duration={commonDuration} />
+              <Counter target={20} duration={commonDuration} />
             </h2>
             <h2 className="font-lora text-gray-400 text-md">
-              countries our investors are based in
+              industry-leading operators in our fund
             </h2>
           </div>
         </div>
         <div className="w-full max-w-48 text-center">
           <div ref={(el) => (statsRef.current[1] = el)} className="opacity-0">
             <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-              <Counter target={30} duration={commonDuration} />
+              <Counter target={300} duration={commonDuration} />
             </h2>
             <h2 className="font-lora text-gray-400 text-md">
-              industry-leading investors in our funds
+              people employed by our investor companies
             </h2>
           </div>
         </div>
         <div className="w-full max-w-48 text-center">
           <div ref={(el) => (statsRef.current[2] = el)} className="opacity-0">
             <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-              <Counter target={200} duration={commonDuration} />
+              <Counter target={70000} duration={commonDuration} />
             </h2>
             <h2 className="font-lora text-gray-400 text-md">
-              people employed by our investors' brands
+              newsletter audience through Gen She
             </h2>
           </div>
         </div>
       </div>
-      <div ref={(el) => (statsRef.current[3] = el)} className={`text-center w-full px-4 ${isFading ? "fade-out" : "fade-in"}`}>
+      <div
+        ref={(el) => (statsRef.current[3] = el)}
+        className={`text-center w-full px-4 ${
+          isFading ? "fade-out" : "fade-in"
+        }`}
+      >
         <h2 className="font-lora text-gray-400 text-3xl mb-4">
           {phrases[currentPhraseIndex]}
         </h2>
