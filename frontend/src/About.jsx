@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import circle1 from "./assets/circle1.png";
 import circle2 from "./assets/circle2.png";
 import circle3 from "./assets/circle3.png";
-import Points from "./Points.jsx";
+// import Points from "./Points.jsx";
 import map from "./assets/us_dot_map.png";
 
 const About = () => {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import 'tailwindcss/tailwind.css';
-import circle1 from './assets/circle1.png';
-import circle2 from './assets/circle2.png';
-import circle3 from './assets/circle3.png';
+import circle1 from '../assets/circle1.png';
+import circle2 from '../assets/circle2.png';
+import circle3 from '../assets/circle3.png';
 
 const Points = () => {
   const [visibleSection, setVisibleSection] = useState(0);

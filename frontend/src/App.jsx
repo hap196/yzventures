@@ -3,8 +3,8 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import About from "./About";
 import Contact from "./Contact";
-import InteractiveLogo from "./InteractiveLogo";
-import ParticleEffect from "./ParticleEffect";
+// import InteractiveLogo from "./InteractiveLogo";
+// import ParticleEffect from "./ParticleEffect";
 import "./App.css";
 import Footer from "./Footer";
 
