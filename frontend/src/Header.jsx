@@ -127,11 +127,11 @@ const Header = () => {
           isFading ? "fade-out" : "fade-in"
         }`}
       >
-        <h2 className="font-lora text-gray-400 text-3xl mb-4">
+        <h2 className="font-lora text-gray-400 text-2xl mb-4">
           {phrases[currentPhraseIndex]}
         </h2>
         <hr className="border-gray-500 w-1/2 mx-auto my-2" />
-        <h3 className="font-lora text-gray-500 text-2xl">
+        <h3 className="font-lora text-gray-500 text-xl">
           {subPhrases[currentPhraseIndex]}
         </h3>
       </div>

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import Particle from "./Particle";
+import Particle from "../Particle";
 
 const colors = ["#003cc1", "#001e5e", "#01319d", "#002880"];
 
