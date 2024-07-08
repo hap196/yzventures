@@ -38,7 +38,9 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed bg-white z-20 w-screen top-0 border-b border-gray-800 border-opacity-30">
+    <nav className="fixed bg-white z-10 w-screen top-0 border-b border-gray-800 border-opacity-30">
+      <div className="absolute top-0 bottom-0 left-24 w-px bg-gray-800 opacity-30"></div>
+      <div className="absolute top-0 bottom-0 right-24 w-px bg-gray-800 opacity-30"></div>
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-4 py-2">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">

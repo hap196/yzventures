@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="relative">
       {/* <ParticleEffect /> */}
-      <div className="bg-white relative z-10">
+      <div className="bg-white relative">
         <div className="absolute top-0 bottom-0 left-24 w-px bg-gray-800 opacity-30"></div>
         <div className="absolute top-0 bottom-0 right-24 w-px bg-gray-800 opacity-30"></div>
         <div className="relative">

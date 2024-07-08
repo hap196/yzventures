@@ -68,7 +68,7 @@ const Header = () => {
       <div className="mx-10 md:mt-10 md:mb-4 md:mx-20">
         <h1
           ref={(el) => (headersRef.current[0] = el)}
-          className="font-lora text-gray-800 text-center text-4xl md:text-5xl opacity-0 mb-28 mt-64"
+          className="font-lora text-gray-800 text-center text-4xl md:text-5xl opacity-0 mb-28 pt-64"
           id="mission"
         >
           Where capital investment has community impact.
