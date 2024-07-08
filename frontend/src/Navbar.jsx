@@ -38,7 +38,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="z-20 w-screen top-0 border-b border-gray-400 border-opacity-30">
+    <nav className="fixed bg-white z-20 w-screen top-0 border-b border-gray-800 border-opacity-30">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-4 py-2">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
@@ -51,10 +51,10 @@ const Navbar = () => {
               />
               <a
                 href="#home"
-                className="font-lora text-gray-300 hover:text-gray-400 text-4xl opacity-0 font-bold"
+                className="font-poppins text-gray-800 hover:text-gray-400 text-4xl opacity-0 font-bold"
                 ref={(el) => (menuItemsRef.current[1] = el)}
               >
-                Y & Z
+                Y&Z
               </a>
             </div>
           </div>
@@ -62,23 +62,23 @@ const Navbar = () => {
             <a
               ref={(el) => (menuItemsRef.current[2] = el)}
               href="#mission"
-              className={`font-lora text-gray-300 hover:text-gray-400 text-lg opacity-0`}
+              className={`font-poppins text-gray-800 hover:text-gray-400 text-md opacity-0`}
             >
-              Mission
+              MISSION
             </a>
             <a
               ref={(el) => (menuItemsRef.current[3] = el)}
               href="#about"
-              className={`font-lora text-gray-300 hover:text-gray-400 text-lg opacity-0`}
+              className={`font-poppins text-gray-800 hover:text-gray-400 text-md opacity-0`}
             >
-              About
+              ABOUT
             </a>
             <a
               ref={(el) => (menuItemsRef.current[4] = el)}
               href="#contact"
-              className={`font-lora text-gray-300 hover:text-gray-400 text-lg opacity-0`}
+              className={`font-poppins text-gray-800 hover:text-gray-400 text-md opacity-0`}
             >
-              Contact
+              CONTACT
             </a>
           </div>
           <div className="-mr-2 flex md:hidden">

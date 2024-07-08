@@ -39,18 +39,18 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-40 bg-darkblue">
+    <div className="flex justify-center items-center py-20 bg-darkblue">
       <div className="w-full max-w-lg">
-        <h2 className="text-3xl text-center text-gray-300 font-lora mb-8">
+        <h2 className="text-3xl text-center text-gray-800 font-lora mb-8">
           Contact
         </h2>
-        <form className="bg-darkerblue shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+        <form className="bg-darkerblue px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-300 text-sm font-lora mb-2" htmlFor="firstName">
+            <label className="block text-gray-800 text-md font-poppins mb-2" htmlFor="firstName">
               First Name
             </label>
             <input
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-darkblue"
+              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
               id="firstName"
               type="text"
               name="firstName"
@@ -60,11 +60,11 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-300 text-sm font-lora mb-2" htmlFor="lastName">
+            <label className="block text-gray-u00 text-md font-poppins mb-2" htmlFor="lastName">
               Last Name
             </label>
             <input
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-darkblue"
+              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
               id="lastName"
               type="text"
               name="lastName"
@@ -74,11 +74,11 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-300 text-sm font-lora mb-2" htmlFor="email">
+            <label className="block text-gray-800 text-md font-poppins mb-2" htmlFor="email">
               Email
             </label>
             <input
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-darkblue"
+              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
               id="email"
               type="email"
               name="email"
@@ -88,11 +88,11 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-300 text-sm font-lora mb-2" htmlFor="message">
+            <label className="block text-gray-800 text-md font-poppins mb-2" htmlFor="message">
               Message
             </label>
             <textarea
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-darkblue"
+              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
               id="message"
               name="message"
               rows="5"
@@ -104,7 +104,7 @@ const Contact = () => {
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="flex items-center border-2 border-gray-400 py-2 px-4 font-lora text-gray-300 text-center text-2xl md:text-3xl hover:border-accent-blue hover:text-accent-blue"
+              className="flex items-center border-2 border-gray-400 py-2 px-4 font-poppins text-gray-800 rounded text-center text-xl md:text-xl hover:border-accent-blue hover:text-accent-blue"
             >
               <FaPaperPlane className="mr-2" />
               Send
