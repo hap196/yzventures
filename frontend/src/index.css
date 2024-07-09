@@ -2,18 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@keyframes float {
-  0% {
-    transform: translate(0, 0) rotate(45deg);
-  }
-  50% {
-    transform: translate(20px, -20px) rotate(45deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(45deg);
-  }
-}
-
 @keyframes floatUp {
   from {
     transform: translateY(50px);
@@ -26,7 +14,7 @@
 }
 
 .animate-floatUp {
-  animation: floatUp 1s ease-out forwards;
+  animation: floatUp 0.7s ease-out forwards;
 }
 
 html {
@@ -115,48 +103,19 @@ html {
   animation: fadeUp 1s ease-out forwards;
 }
 
-@keyframes floatUp {
+.bg-gradient-gray-blue {
+  background: linear-gradient(to bottom right, #1c2e5d, #ffffff);
+}
+
+@keyframes translateUp {
   from {
+    transform: translateY(0px);
+  }
+  to {
     transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
-@keyframes floatUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-floatUp {
-  animation: floatUp 0.5s ease-out forwards;
-}
-
-.transition-opacity {
-  transition: opacity 0.5s ease-out, transform 1.5s ease-out;
-}
-
-.opacity-0 {
-  opacity: 0;
-}
-
-.opacity-100 {
-  opacity: 1;
-}
-
-.translate-y-0 {
-  transform: translateY(0);
-}
-
-.translate-y-10 {
-  transform: translateY(10px);
+.animate-translateUp {
+  animation: translateUp;
 }

@@ -69,7 +69,7 @@ const Navbar = () => {
               />
               <a
                 href="#home"
-                className="font-poppins text-gray-800 hover:text-gray-500 text-4xl opacity-0 font-bold"
+                className="font-poppins text-gray-800 hover:text-custom-blue-3 text-4xl opacity-0 font-bold"
                 ref={(el) => (menuItemsRef.current[1] = el)}
               >
                 Y&Z
@@ -81,7 +81,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[2] = el)}
               href="#mission"
               onClick={(event) => scrollToSection(event, "#mission")}
-              className="font-poppins text-gray-800 hover:text-gray-500 text-md opacity-0"
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0 hover:animate-translateUp"
             >
               MISSION
             </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[3] = el)}
               href="#portfolio"
               onClick={(event) => scrollToSection(event, "#portfolio")}
-              className="font-poppins text-gray-800 hover:text-gray-500 text-md opacity-0"
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
             >
               PORTFOLIO
             </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[4] = el)}
               href="#about"
               onClick={(event) => scrollToSection(event, "#about")}
-              className="font-poppins text-gray-800 hover:text-gray-500 text-md opacity-0"
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
             >
               ABOUT
             </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[5] = el)}
               href="#contact"
               onClick={(event) => scrollToSection(event, "#contact")}
-              className="font-poppins text-gray-800 hover:text-gray-500 text-md opacity-0"
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
             >
               CONTACT
             </a>

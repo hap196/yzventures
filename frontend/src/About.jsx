@@ -7,8 +7,8 @@ const About = () => {
   const statsRef = useRef([]);
   const [isVisible, setIsVisible] = useState([false, false, false]);
   const commonDuration = 2000; // Common duration for all counters in milliseconds
-  const animationDelays = [0, 200, 400, 600, 800, 1000, 1200, 1400];
-  const statsDelays = [0, 200, 400];
+  const animationDelays = [0, 300, 600, 900, 1200, 1500, 1800, 2100];
+  const statsDelays = [0, 300, 600];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -84,14 +84,14 @@ const About = () => {
           <div className="w-full max-w-48 text-center">
             <div
               ref={(el) => (statsRef.current[0] = el)}
-              className={`transition-opacity transform duration-500 ${
+              className={`transition-opacity transform duration-700 ${
                 isVisible[0] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
               <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
                 {isVisible[0] && <Counter target={20} duration={commonDuration} />}
               </h2>
-              <h2 className="font-lora text-gray-600 text-md">
+              <h2 className="font-poppins text-gray-600 text-md">
                 industry-leading operators in our fund
               </h2>
             </div>
@@ -99,14 +99,14 @@ const About = () => {
           <div className="w-full max-w-48 text-center">
             <div
               ref={(el) => (statsRef.current[1] = el)}
-              className={`transition-opacity transform duration-500 ${
+              className={`transition-opacity transform duration-700 ${
                 isVisible[1] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
               <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
                 {isVisible[1] && <Counter target={300} duration={commonDuration} />}
               </h2>
-              <h2 className="font-lora text-gray-600 text-md">
+              <h2 className="font-poppins text-gray-600 text-md">
                 people employed by our investor companies
               </h2>
             </div>
@@ -114,14 +114,14 @@ const About = () => {
           <div className="w-full max-w-48 text-center">
             <div
               ref={(el) => (statsRef.current[2] = el)}
-              className={`transition-opacity transform duration-500 ${
+              className={`transition-opacity transform duration-700 ${
                 isVisible[2] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
               <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
                 {isVisible[2] && <Counter target={70000} duration={commonDuration} />}
               </h2>
-              <h2 className="font-lora text-gray-600 text-md">
+              <h2 className="font-poppins text-gray-600 text-md">
                 newsletter audience through Gen She
               </h2>
             </div>
