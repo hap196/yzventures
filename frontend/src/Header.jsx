@@ -2,24 +2,23 @@ import React, { useEffect, useRef, useState } from "react";
 import Counter from "./Counter";
 import "./index.css";
 import InteractiveLogo from "./InteractiveLogo";
+import PortfolioScroll from "./PortfolioScroll";
 
 const Header = () => {
   const headersRef = useRef([]);
-  const statsRef = useRef([]);
-  const commonDuration = 2000; // Common duration for all counters in milliseconds
 
   const phrases = [
     "Unique Expertise and Network in M&A",
     "Represent Successful Operators",
     "Support Community",
-    "Ensure Investors Create Value"
+    "Ensure Investors Create Value",
   ];
 
   const subPhrases = [
     "Y&Z is dedicated to supporting investments to the final stages, or the Y&Z.",
     "Y&Z invests on behalf of successful operators across legacy sectors.",
     "Y&Z invests on behalf of first generation and immigrant entrepreneurial families",
-    "Y&Z invests in industries where our investors offer a unique expertise (see partner industries)"
+    "Y&Z invests in industries where our investors offer a unique expertise (see partner industries)",
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -44,14 +43,6 @@ const Header = () => {
       }
     });
 
-    statsRef.current.forEach((el, index) => {
-      if (el) {
-        setTimeout(() => {
-          observer.observe(el);
-        }, index * 200); // delay to make them appear one after the other
-      }
-    });
-
     return () => {
       observer.disconnect();
     };
@@ -73,68 +64,37 @@ const Header = () => {
 
   return (
     <div className="h-full mb-48">
-      <InteractiveLogo />
-      <div className="mt-10 mb-6 mx-10 md:mt-10 md:mb-4 md:mx-20">
+      <div className="mx-10 md:mt-10 md:mb-4 md:mx-20">
         <h1
           ref={(el) => (headersRef.current[0] = el)}
-          className="font-lora text-gray-200 text-center text-4xl md:text-6xl opacity-0 mb-4"
+          className="font-lora text-gray-800 text-center text-4xl md:mx-10 mx-5 md:text-5xl opacity-0 mb-28 pt-64 animate-floatUp"
           id="mission"
+          style={{ animationDelay: "0s" }}
         >
-          Where capital investment
+          Where capital investment has community impact.
         </h1>
-        <h1
-          ref={(el) => (headersRef.current[1] = el)}
-          className="font-lora text-gray-200 text-center text-4xl md:text-6xl opacity-0 mb-24"
-        >
-          has <span className="text-accent-blue">community impact</span>.
-        </h1>
-      </div>
-      <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-20 mb-24 mx-10 md:mx-20">
-        <div className="w-full max-w-48 text-center">
-          <div ref={(el) => (statsRef.current[0] = el)} className="opacity-0">
-            <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-              <Counter target={20} duration={commonDuration} />
-            </h2>
-            <h2 className="font-lora text-gray-400 text-md">
-              industry-leading operators in our fund
-            </h2>
-          </div>
-        </div>
-        <div className="w-full max-w-48 text-center">
-          <div ref={(el) => (statsRef.current[1] = el)} className="opacity-0">
-            <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-              <Counter target={300} duration={commonDuration} />
-            </h2>
-            <h2 className="font-lora text-gray-400 text-md">
-              people employed by our investor companies
-            </h2>
-          </div>
-        </div>
-        <div className="w-full max-w-48 text-center">
-          <div ref={(el) => (statsRef.current[2] = el)} className="opacity-0">
-            <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-              <Counter target={70000} duration={commonDuration} />
-            </h2>
-            <h2 className="font-lora text-gray-400 text-md">
-              newsletter audience through Gen She
-            </h2>
-          </div>
-        </div>
       </div>
       <div
-        ref={(el) => (statsRef.current[3] = el)}
-        className={`text-center w-full px-4 ${
+        className={`text-center w-full px-4 mb-40 ${
           isFading ? "fade-out" : "fade-in"
         }`}
       >
-        <h2 className="font-lora text-gray-400 text-2xl mb-4">
+        <h2
+          ref={(el) => (headersRef.current[1] = el)}
+          className="font-poppins text-gray-800 text-2xl md:mx-10 mx-5 mb-4 opacity-0 animate-floatUp"
+          style={{ animationDelay: "0.5s" }}
+        >
           {phrases[currentPhraseIndex]}
         </h2>
-        <hr className="border-gray-500 w-1/2 mx-auto my-2" />
-        <h3 className="font-lora text-gray-500 text-xl">
+        <h3
+          ref={(el) => (headersRef.current[2] = el)}
+          className="font-poppins border-t border-gray-300 lg:mx-72 md:mx-36 mx-10 text-gray-600 text-xl pt-4 opacity-0 animate-floatUp"
+          style={{ animationDelay: "1s" }}
+        >
           {subPhrases[currentPhraseIndex]}
         </h3>
       </div>
+      <PortfolioScroll />
     </div>
   );
 };

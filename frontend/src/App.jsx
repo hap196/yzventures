@@ -10,11 +10,11 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="relative bg-gradient-gray-blue">
+    <div className="relative">
       {/* <ParticleEffect /> */}
-      <div className="text-gray-300 relative z-10">
-        <div className="absolute top-0 bottom-0 left-24 w-px bg-gray-400 opacity-30"></div>
-        <div className="absolute top-0 bottom-0 right-24 w-px bg-gray-400 opacity-30"></div>
+      <div className="bg-white relative">
+        <div className="absolute top-0 bottom-0 left-4 sm:left-8 md:left-16 lg:left-20 w-px bg-gray-800 opacity-30"></div>
+        <div className="absolute top-0 bottom-0 right-4 sm:right-8 md:right-16 lg:right-20 w-px bg-gray-800 opacity-30"></div>
         <div className="relative">
         <Navbar />
           <section id="home">

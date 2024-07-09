@@ -13,15 +13,22 @@ const Counter = ({ target, duration }) => {
     const timer = setInterval(() => {
       start += increment;
       if (start >= end) {
-        setCount(end.toLocaleString());
+        setCount(formatCount(end));
         clearInterval(timer);
       } else {
-        setCount(Math.ceil(start).toLocaleString());
+        setCount(formatCount(Math.ceil(start)));
       }
     }, 10);
 
     return () => clearInterval(timer);
   }, [target, duration]);
+
+  const formatCount = (count) => {
+    if (count >= 1000) {
+      return `${(count / 1000).toFixed(count % 1000 === 0 ? 0 : 1)}k`;
+    }
+    return count.toLocaleString();
+  };
 
   return <>{count}</>;
 };

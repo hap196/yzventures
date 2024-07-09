@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import logo from "./assets/logo_nowords.png";
-import "./assets/yz_logo.png";
 import InteractiveLogo from "./InteractiveLogo";
 
 const Navbar = () => {
@@ -9,6 +8,20 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    const section = document.querySelector(sectionId);
+    const navbar = document.getElementById("navbar");
+    const offset = navbar.offsetHeight;
+    const sectionPosition =
+      section.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({
+      top: sectionPosition,
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
@@ -25,7 +38,7 @@ const Navbar = () => {
     );
 
     menuItemsRef.current.forEach((el, index) => {
-      if (el) {
+      if (el && !el.classList.contains("lg:hidden")) {
         setTimeout(() => {
           observer.observe(el);
         }, index * 200); // delay to make them appear one after the other
@@ -35,11 +48,16 @@ const Navbar = () => {
     return () => {
       observer.disconnect();
     };
-  }, [isOpen]);
+  }, []);
 
   return (
-    <nav className="z-20 w-screen top-0 border-b border-gray-400 border-opacity-30">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-4 py-2">
+    <nav
+      id="navbar"
+      className="fixed bg-white z-10 w-full top-0 border-b border-gray-800 border-opacity-30"
+    >
+      <div className="absolute top-0 bottom-0 left-4 sm:left-8 md:left-16 lg:left-20 w-px bg-gray-800 opacity-30"></div>
+      <div className="absolute top-0 bottom-0 right-4 sm:right-8 md:right-16 lg:right-20 w-px bg-gray-800 opacity-30"></div>
+      <div className="lg:mx-24 md:mx-20 sm:mx-18 mx-10 px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
@@ -51,50 +69,85 @@ const Navbar = () => {
               />
               <a
                 href="#home"
-                className="font-lora text-gray-300 hover:text-gray-400 text-4xl opacity-0 font-bold"
+                className="font-poppins text-gray-800 hover:text-custom-blue-3 text-4xl opacity-0 font-bold"
                 ref={(el) => (menuItemsRef.current[1] = el)}
               >
-                Y & Z
+                Y&Z
               </a>
             </div>
           </div>
-          <div className="hidden md:flex space-x-10">
+          <div className="hidden lg:flex space-x-10">
             <a
               ref={(el) => (menuItemsRef.current[2] = el)}
               href="#mission"
-              className={`font-lora text-gray-300 hover:text-gray-400 text-lg opacity-0`}
+              onClick={(event) => scrollToSection(event, "#mission")}
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0 hover:animate-translateUp"
             >
-              Mission
+              MISSION
             </a>
             <a
               ref={(el) => (menuItemsRef.current[3] = el)}
-              href="#about"
-              className={`font-lora text-gray-300 hover:text-gray-400 text-lg opacity-0`}
+              href="#portfolio"
+              onClick={(event) => scrollToSection(event, "#portfolio")}
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
             >
-              About
+              PORTFOLIO
             </a>
             <a
               ref={(el) => (menuItemsRef.current[4] = el)}
-              href="#contact"
-              className={`font-lora text-gray-300 hover:text-gray-400 text-lg opacity-0`}
+              href="#about"
+              onClick={(event) => scrollToSection(event, "#about")}
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
             >
-              Contact
+              ABOUT
+            </a>
+            <a
+              ref={(el) => (menuItemsRef.current[5] = el)}
+              href="#contact"
+              onClick={(event) => scrollToSection(event, "#contact")}
+              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
+            >
+              CONTACT
             </a>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex lg:hidden">
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-accent-blue focus:outline-none focus:text-accent-blue px-4"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-gray-800 focus:outline-none focus:text-gray-800 px-4"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <svg className="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="h-10 w-10"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg className="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <svg
+                  className="h-10 w-10"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
                 </svg>
               )}
             </button>
@@ -102,28 +155,35 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="lg:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-6">
             <a
-              ref={(el) => (menuItemsRef.current[5] = el)}
               href="#mission"
-              className={`block px-3 py-2 rounded-md text-base font-medium text-center text-custom-blue-1 hover:text-accent-blue opacity-0`}
+              onClick={(event) => scrollToSection(event, "#mission")}
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
             >
-              Mission
+              MISSION
             </a>
             <a
-              ref={(el) => (menuItemsRef.current[6] = el)}
+              href="#portfolio"
+              onClick={(event) => scrollToSection(event, "#portfolio")}
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
+            >
+              PORTFOLIO
+            </a>
+            <a
               href="#about"
-              className={`block px-3 py-2 rounded-md text-base font-medium text-center text-custom-blue-1 hover:text-accent-blue opacity-0`}
+              onClick={(event) => scrollToSection(event, "#about")}
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
             >
-              About
+              ABOUT
             </a>
             <a
-              ref={(el) => (menuItemsRef.current[7] = el)}
               href="#contact"
-              className={`block px-3 py-2 rounded-md text-base font-medium text-center text-custom-blue-1 hover:text-accent-blue opacity-0`}
+              onClick={(event) => scrollToSection(event, "#contact")}
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
             >
-              Contact
+              CONTACT
             </a>
           </div>
         </div>

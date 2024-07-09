@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         lora: ['Lora', 'serif', 'Sen'],
+        sans: ['Poppins', 'sans-serif'],
       },
     },
   },
