@@ -5,17 +5,20 @@ const Stats = () => {
   const statsRef = useRef([]);
   const [isVisible, setIsVisible] = useState([false, false, false]);
   const commonDuration = 2000; // Common duration for all counters in milliseconds
+  const animationDelays = [0, 500, 1000]; // Delays for each stat element in milliseconds
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
-            setIsVisible((prev) => {
-              const newState = [...prev];
-              newState[index] = true;
-              return newState;
-            });
+            setTimeout(() => {
+              setIsVisible((prev) => {
+                const newState = [...prev];
+                newState[index] = true;
+                return newState;
+              });
+            }, animationDelays[index]);
             observer.unobserve(entry.target);
           }
         });
@@ -36,12 +39,17 @@ const Stats = () => {
         }
       });
     };
-  }, []);
+  }, [animationDelays]);
 
   return (
     <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-20 mb-24 mx-10 md:mx-32">
       <div className="w-full max-w-48 text-center">
-        <div ref={(el) => (statsRef.current[0] = el)} className={`transition-opacity duration-500 ${isVisible[0] ? "opacity-100" : "opacity-0"}`}>
+        <div
+          ref={(el) => (statsRef.current[0] = el)}
+          className={`transition-opacity transform duration-500 ${
+            isVisible[0] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
             {isVisible[0] && <Counter target={20} duration={commonDuration} />}
           </h2>
@@ -51,7 +59,12 @@ const Stats = () => {
         </div>
       </div>
       <div className="w-full max-w-48 text-center">
-        <div ref={(el) => (statsRef.current[1] = el)} className={`transition-opacity duration-500 ${isVisible[1] ? "opacity-100" : "opacity-0"}`}>
+        <div
+          ref={(el) => (statsRef.current[1] = el)}
+          className={`transition-opacity transform duration-500 ${
+            isVisible[1] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
             {isVisible[1] && <Counter target={300} duration={commonDuration} />}
           </h2>
@@ -61,7 +74,12 @@ const Stats = () => {
         </div>
       </div>
       <div className="w-full max-w-48 text-center">
-        <div ref={(el) => (statsRef.current[2] = el)} className={`transition-opacity duration-500 ${isVisible[2] ? "opacity-100" : "opacity-0"}`}>
+        <div
+          ref={(el) => (statsRef.current[2] = el)}
+          className={`transition-opacity transform duration-500 ${
+            isVisible[2] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
             {isVisible[2] && <Counter target={70000} duration={commonDuration} />}
           </h2>

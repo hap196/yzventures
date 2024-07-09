@@ -64,12 +64,12 @@ const Header = () => {
 
   return (
     <div className="h-full mb-48">
-      {/* <InteractiveLogo /> */}
       <div className="mx-10 md:mt-10 md:mb-4 md:mx-20">
         <h1
           ref={(el) => (headersRef.current[0] = el)}
-          className="font-lora text-gray-800 text-center text-4xl md:mx-10 mx-5 md:text-5xl opacity-0 mb-28 pt-64"
+          className="font-lora text-gray-800 text-center text-4xl md:mx-10 mx-5 md:text-5xl opacity-0 mb-28 pt-64 animate-floatUp"
           id="mission"
+          style={{ animationDelay: "0s" }}
         >
           Where capital investment has community impact.
         </h1>
@@ -79,10 +79,18 @@ const Header = () => {
           isFading ? "fade-out" : "fade-in"
         }`}
       >
-        <h2 className="font-poppins text-gray-800 text-2xl md:mx-10 mx-5 mb-4">
+        <h2
+          ref={(el) => (headersRef.current[1] = el)}
+          className="font-poppins text-gray-800 text-2xl md:mx-10 mx-5 mb-4 opacity-0 animate-floatUp"
+          style={{ animationDelay: "0.5s" }}
+        >
           {phrases[currentPhraseIndex]}
         </h2>
-        <h3 className="font-poppins border-t border-gray-300 lg:mx-72 md:mx-36 mx-10 text-gray-600 text-xl pt-4">
+        <h3
+          ref={(el) => (headersRef.current[2] = el)}
+          className="font-poppins border-t border-gray-300 lg:mx-72 md:mx-36 mx-10 text-gray-600 text-xl pt-4 opacity-0 animate-floatUp"
+          style={{ animationDelay: "1s" }}
+        >
           {subPhrases[currentPhraseIndex]}
         </h3>
       </div>

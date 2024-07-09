@@ -12,13 +12,13 @@ const PortfolioScroll = () => {
       src: image1,
       alt: "Image 1",
       href: "https://www.astercare.com/",
-      height: "h-10",
+      height: "h-8",
     },
     {
       src: image2,
       alt: "Image 2",
       href: "https://daisyco.com/",
-      height: "h-20",
+      height: "h-16",
     },
     {
       src: image3,
@@ -42,7 +42,7 @@ const PortfolioScroll = () => {
 
   return (
     <div
-      className="border-t border-b border-gray-300 overflow-hidden mx-20 mb-20 flex items-center"
+      className="border-t border-b border-gray-300 overflow-x-scroll mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-20 flex items-center"
       id="portfolio"
     >
       <div className="flex">

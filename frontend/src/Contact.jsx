@@ -45,7 +45,7 @@ const Contact = () => {
         <h2 className="text-3xl text-center text-gray-800 font-lora mb-8">
           Contact
         </h2>
-        <form className="bg-darkerblue px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+        <form className="px-16 lg:px-4 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-800 text-md font-poppins mb-2" htmlFor="firstName">
               First Name
