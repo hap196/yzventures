@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
+import InteractiveLogo from './InteractiveLogo';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -111,7 +112,9 @@ const Contact = () => {
             </button>
           </div>
         </form>
+        <InteractiveLogo />
       </div>
+      
     </div>
   );
 };
