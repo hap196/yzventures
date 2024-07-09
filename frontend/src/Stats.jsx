@@ -39,7 +39,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-20 mb-24 mx-10 md:mx-20">
+    <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-20 mb-24 mx-10 md:mx-32">
       <div className="w-full max-w-48 text-center">
         <div ref={(el) => (statsRef.current[0] = el)} className={`transition-opacity duration-500 ${isVisible[0] ? "opacity-100" : "opacity-0"}`}>
           <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">

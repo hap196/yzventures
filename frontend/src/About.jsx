@@ -42,10 +42,10 @@ const About = () => {
         About us
       </h2>
       <Stats />
-      <div className="flex justify-center items-center max-w-3xl mx-auto mt-4 md:mt-2 mb-4 md:mb-40">
+      <div className="flex flex-col lg:flex-row justify-center items-center max-w-3xl lg:mx-auto mx-10 mb-20 mt-4 md:mt-2 mb-4 md:mb-40">
         <p
           ref={(el) => elementsRef.current.push(el)}
-          className="font-lora text-gray-800 text-xl text-left mr-8 max-w-xl opacity-0"
+          className="font-lora text-gray-800 md:text-xl text-lg text-center lg:text-left md:mb-20 mb-20 max-w-xl opacity-0 lg:mr-10"
         >
           Y&Z Ventures is a Los Angeles based{" "}
           <span className="text-custom-blue-3 font-bold">
@@ -59,7 +59,7 @@ const About = () => {
           </span>
           , or the end game.
         </p>
-        <img src={map} className="w-80 ml-8 fade-in-longer" />
+        <img src={map} className="lg:w-80 w-72 md:w-64 fade-in-longer lg:ml-10" />
       </div>
       <div className="mt-20 mb-20">
         <h2
@@ -68,7 +68,7 @@ const About = () => {
         >
           Partner Industries
         </h2>
-        <div className="font-poppins text-xl mx-24 grid grid-cols-1 text-gray-800 border-gray-300 border-t border-b md:grid-cols-3">
+        <div className="font-poppins text-xl mx-4 sm:mx-8 md:mx-16 lg:mx-20 grid grid-cols-1 text-gray-800 border-gray-300 border-t border-b md:grid-cols-3">
           <div
             ref={(el) => elementsRef.current.push(el)}
             className="text-center md:border-r border-gray-300 opacity-0 py-10"

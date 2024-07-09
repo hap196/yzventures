@@ -42,7 +42,7 @@ const PortfolioScroll = () => {
 
   return (
     <div
-      className="border-t border-b border-gray-300 overflow-hidden mx-24 mb-24 flex items-center"
+      className="border-t border-b border-gray-300 overflow-hidden mx-20 mb-20 flex items-center"
       id="portfolio"
     >
       <div className="flex">

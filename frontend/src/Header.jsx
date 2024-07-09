@@ -68,7 +68,7 @@ const Header = () => {
       <div className="mx-10 md:mt-10 md:mb-4 md:mx-20">
         <h1
           ref={(el) => (headersRef.current[0] = el)}
-          className="font-lora text-gray-800 text-center text-4xl md:text-5xl opacity-0 mb-28 pt-64"
+          className="font-lora text-gray-800 text-center text-4xl md:mx-10 mx-5 md:text-5xl opacity-0 mb-28 pt-64"
           id="mission"
         >
           Where capital investment has community impact.
@@ -79,11 +79,10 @@ const Header = () => {
           isFading ? "fade-out" : "fade-in"
         }`}
       >
-        <h2 className="font-poppins text-gray-800 text-2xl mb-4">
+        <h2 className="font-poppins text-gray-800 text-2xl md:mx-10 mx-5 mb-4">
           {phrases[currentPhraseIndex]}
         </h2>
-        <hr className="border-gray-500 w-1/2 mx-auto my-2" />
-        <h3 className="font-poppins text-gray-600 text-xl">
+        <h3 className="font-poppins border-t border-gray-300 lg:mx-72 md:mx-36 mx-10 text-gray-600 text-xl pt-4">
           {subPhrases[currentPhraseIndex]}
         </h3>
       </div>
