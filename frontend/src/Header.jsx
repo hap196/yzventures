@@ -68,11 +68,7 @@ const Header = () => {
       {/* <InteractiveLogo /> */}
         <h1
           ref={(el) => (headersRef.current[0] = el)}
-<<<<<<< Updated upstream
-          className="font-lora text-gray-200 text-center text-4xl md:mx-10 mx-5 md:text-5xl opacity-0 mb-28 pt-64 animate-floatUp"
-=======
           className="font-lora text-gray-300 text-center text-4xl md:mx-10 mx-5 md:text-5xl opacity-0 mb-28 pt-14 animate-floatUp"
->>>>>>> Stashed changes
           id="mission"
           style={{ animationDelay: "0s" }}
         >
