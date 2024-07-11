@@ -119,3 +119,7 @@ html {
 .animate-translateUp {
   animation: translateUp;
 }
+
+.white-filter {
+  filter: brightness(0) invert(1);
+}

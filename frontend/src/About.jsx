@@ -75,7 +75,7 @@ const About = () => {
     <div className="h-full">
       <h2
         ref={(el) => elementsRef.current.push(el)}
-        className="text-center font-lora text-gray-800 text-2xl md:text-3xl mb-16 opacity-0"
+        className="text-center font-lora text-gray-200 text-2xl md:text-3xl mb-16 opacity-0"
       >
         About us
       </h2>
@@ -88,10 +88,10 @@ const About = () => {
                 isVisible[0] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
+              <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
                 {isVisible[0] && <Counter target={20} duration={commonDuration} />}
               </h2>
-              <h2 className="font-poppins text-gray-600 text-md">
+              <h2 className="font-poppins text-gray-400 text-md">
                 industry-leading operators in our fund
               </h2>
             </div>
@@ -103,10 +103,10 @@ const About = () => {
                 isVisible[1] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
+              <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
                 {isVisible[1] && <Counter target={300} duration={commonDuration} />}
               </h2>
-              <h2 className="font-poppins text-gray-600 text-md">
+              <h2 className="font-poppins text-gray-400 text-md">
                 people employed by our investor companies
               </h2>
             </div>
@@ -118,10 +118,10 @@ const About = () => {
                 isVisible[2] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <h2 className="font-lora text-gray-800 text-5xl md:text-7xl mb-4">
+              <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
                 {isVisible[2] && <Counter target={70000} duration={commonDuration} />}
               </h2>
-              <h2 className="font-poppins text-gray-600 text-md">
+              <h2 className="font-poppins text-gray-400 text-md">
                 newsletter audience through Gen She
               </h2>
             </div>
@@ -131,15 +131,15 @@ const About = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center max-w-3xl lg:mx-auto mx-10 mb-20 mt-4 md:mt-2 mb-4 md:mb-40">
         <p
           ref={(el) => elementsRef.current.push(el)}
-          className="font-lora text-gray-800 md:text-xl text-lg text-center lg:text-left lg:mb-0 md:mb-20 mb-20 max-w-xl opacity-0 lg:mr-10"
+          className="font-lora text-gray-300 md:text-xl text-lg text-center lg:text-left lg:mb-0 md:mb-20 mb-20 max-w-xl opacity-0 lg:mr-10"
         >
           Y&Z Ventures is a Los Angeles based{" "}
-          <span className="text-custom-blue-3 font-bold">
+          <span className="text-accent-blue font-bold">
             multi-family office
           </span>
           , operating as a direct investment vehicle + fund of funds. We are
           dedicated to
-          <span className="text-custom-blue-3 font-bold">
+          <span className="text-accent-blue font-bold">
             {" "}
             supporting investments to the final stages
           </span>
@@ -154,14 +154,14 @@ const About = () => {
       <div className="mt-20 mb-20">
         <h2
           ref={(el) => elementsRef.current.push(el)}
-          className="text-center font-lora text-gray-800 text-2xl md:text-3xl mb-12 opacity-0"
+          className="text-center font-lora text-gray-200 text-2xl md:text-3xl mb-12 opacity-0"
         >
           Partner Industries
         </h2>
-        <div className="font-poppins text-xl mx-4 sm:mx-8 md:mx-16 lg:mx-20 grid grid-cols-1 text-gray-800 border-gray-300 border-t border-b md:grid-cols-3">
+        <div className="font-poppins text-xl mx-4 sm:mx-8 md:mx-16 lg:mx-20 grid grid-cols-1 text-gray-300 border-gray-500 border-t border-b md:grid-cols-3">
           <div
             ref={(el) => elementsRef.current.push(el)}
-            className="text-center md:border-r border-gray-300 opacity-0 py-10"
+            className="text-center md:border-r border-gray-300 border-opacity-30 py-10"
           >
             <ul>
               <li>Agriculture</li>
@@ -172,7 +172,7 @@ const About = () => {
           </div>
           <div
             ref={(el) => elementsRef.current.push(el)}
-            className="text-center md:border-r border-gray-300 opacity-0 py-10"
+            className="text-center md:border-r border-gray-300 border-opacity-30 py-10"
           >
             <ul>
               <li>Legal</li>

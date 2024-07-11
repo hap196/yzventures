@@ -53,10 +53,10 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className="fixed bg-white z-10 w-full top-0 border-b border-gray-800 border-opacity-30"
+      className="fixed bg-blue-gray z-10 w-full top-0 border-b border-gray-300 border-opacity-30"
     >
-      <div className="absolute top-0 bottom-0 left-4 sm:left-8 md:left-16 lg:left-20 w-px bg-gray-800 opacity-30"></div>
-      <div className="absolute top-0 bottom-0 right-4 sm:right-8 md:right-16 lg:right-20 w-px bg-gray-800 opacity-30"></div>
+      <div className="absolute top-0 bottom-0 left-4 sm:left-8 md:left-16 lg:left-20 w-px bg-gray-300 opacity-30"></div>
+      <div className="absolute top-0 bottom-0 right-4 sm:right-8 md:right-16 lg:right-20 w-px bg-gray-300 opacity-30"></div>
       <div className="lg:mx-24 md:mx-20 sm:mx-18 mx-10 px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
@@ -64,12 +64,12 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className="h-10 w-10 mr-2 opacity-0"
+                className="h-10 w-10 mr-2 opacity-0 hover:text-accent-blue"
                 ref={(el) => (menuItemsRef.current[0] = el)}
               />
               <a
                 href="#home"
-                className="font-poppins text-gray-800 hover:text-custom-blue-3 text-4xl opacity-0 font-bold"
+                className="font-poppins text-gray-200 hover:text-accent-blue text-4xl opacity-0 font-bold"
                 ref={(el) => (menuItemsRef.current[1] = el)}
               >
                 Y&Z
@@ -81,7 +81,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[2] = el)}
               href="#mission"
               onClick={(event) => scrollToSection(event, "#mission")}
-              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0 hover:animate-translateUp"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0 hover:animate-translateUp"
             >
               MISSION
             </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[3] = el)}
               href="#portfolio"
               onClick={(event) => scrollToSection(event, "#portfolio")}
-              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0"
             >
               PORTFOLIO
             </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[4] = el)}
               href="#about"
               onClick={(event) => scrollToSection(event, "#about")}
-              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0"
             >
               ABOUT
             </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[5] = el)}
               href="#contact"
               onClick={(event) => scrollToSection(event, "#contact")}
-              className="font-poppins text-gray-800 hover:text-custom-blue-3 hover:underline hover:underline-offset-8 text-md opacity-0"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0"
             >
               CONTACT
             </a>
@@ -114,7 +114,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-gray-800 focus:outline-none focus:text-gray-800 px-4"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-gray-800 focus:outline-none focus:text-gray-800 px-4"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (

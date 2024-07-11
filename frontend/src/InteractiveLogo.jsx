@@ -23,7 +23,7 @@ const InteractiveLogo = () => {
   }, []);
 
   return (
-    <div className="logo-wrapper flex justify-center items-center pt-28 pb-6">
+    <div className="logo-wrapper flex justify-center items-center pt-52 pb-6">
       <div ref={logoRef} className="logo-container">
         <div className="logo-square top-left custom-blue-1">
           <div className="side side-top"></div>

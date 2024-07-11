@@ -112,7 +112,6 @@ const Contact = () => {
             </button>
           </div>
         </form>
-        <InteractiveLogo />
       </div>
       
     </div>
