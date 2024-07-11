@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
-import InteractiveLogo from './InteractiveLogo';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -40,18 +39,18 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-20 bg-darkblue">
+    <div className="flex justify-center items-center py-20">
       <div className="w-full max-w-lg">
-        <h2 className="text-3xl text-center text-gray-800 font-lora mb-8">
+        <h2 className="text-3xl text-center text-gray-300 font-lora mb-8">
           Contact
         </h2>
         <form className="px-16 lg:px-4 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-800 text-md font-poppins mb-2" htmlFor="firstName">
+            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="firstName">
               First Name
             </label>
             <input
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
+              className="shadow appearance-none border border-gray-300 bg-transparent rounded w-full border-opacity-30 py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:border-accent-blue"
               id="firstName"
               type="text"
               name="firstName"
@@ -61,11 +60,11 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-u00 text-md font-poppins mb-2" htmlFor="lastName">
+            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="lastName">
               Last Name
             </label>
             <input
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
+              className="shadow appearance-none border border-gray-300 bg-transparent rounded w-full border-opacity-30 py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:border-accent-blue"
               id="lastName"
               type="text"
               name="lastName"
@@ -75,11 +74,11 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-800 text-md font-poppins mb-2" htmlFor="email">
+            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="email">
               Email
             </label>
             <input
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
+              className="shadow appearance-none border bg-transparent border-gray-300 rounded w-full border-opacity-30 py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:border-accent-blue"
               id="email"
               type="email"
               name="email"
@@ -89,11 +88,11 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-800 text-md font-poppins mb-2" htmlFor="message">
+            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="message">
               Message
             </label>
             <textarea
-              className="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline bg-tan"
+              className="shadow appearance-none border bg-transparent border-gray-300 border-opacity-30 rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:border-accent-blue"
               id="message"
               name="message"
               rows="5"
@@ -105,7 +104,7 @@ const Contact = () => {
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="flex items-center border-2 border-gray-400 py-2 px-4 font-poppins text-gray-800 rounded text-center text-xl md:text-xl hover:border-accent-blue hover:text-accent-blue"
+              className="flex items-center border-2 border-gray-400 py-2 px-4 border-opacity-30 font-poppins text-gray-300 rounded text-center text-xl md:text-xl hover:border-accent-blue hover:text-accent-blue"
             >
               <FaPaperPlane className="mr-2" />
               Send
@@ -113,7 +112,6 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      
     </div>
   );
 };

@@ -161,7 +161,7 @@ const About = () => {
         <div className="font-poppins text-xl mx-4 sm:mx-8 md:mx-16 lg:mx-20 grid grid-cols-1 text-gray-300 border-gray-500 border-t border-b md:grid-cols-3">
           <div
             ref={(el) => elementsRef.current.push(el)}
-            className="text-center md:border-r border-gray-300 border-opacity-30 py-10"
+            className="text-center md:border-r border-gray-300 border-opacity-30 py-10 opacity-0"
           >
             <ul>
               <li>Agriculture</li>
@@ -172,7 +172,7 @@ const About = () => {
           </div>
           <div
             ref={(el) => elementsRef.current.push(el)}
-            className="text-center md:border-r border-gray-300 border-opacity-30 py-10"
+            className="text-center md:border-r border-gray-300 border-opacity-30 py-10 opacity-0"
           >
             <ul>
               <li>Legal</li>
