@@ -7,7 +7,7 @@ const About = () => {
   const [showIndustries, setShowIndustries] = useState([false, false, false]);
   const countersRef = useRef(null);
   const industriesRef = useRef(null);
-  const commonDuration = 2000; 
+  const commonDuration = 2000;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -17,11 +17,11 @@ const About = () => {
             if (entry.target === countersRef.current) {
               setTimeout(() => {
                 setShowCounters(true);
-              }, 100); 
+              }, 100);
             }
-            
+
             if (entry.target === industriesRef.current) {
-              const industryDelays = [700, 1100, 1600]; 
+              const industryDelays = [700, 1100, 1600];
               industryDelays.forEach((delay, index) => {
                 setTimeout(() => {
                   setShowIndustries((prev) => {
@@ -32,7 +32,6 @@ const About = () => {
                 }, delay);
               });
             }
-            
           }
         });
       },
@@ -57,7 +56,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="h-full">
+    <div className="h-full pt-24">
       <h2 className="text-center font-lora text-gray-200 text-2xl md:text-3xl mb-16">
         About us
       </h2>
@@ -66,7 +65,11 @@ const About = () => {
           <div className="w-full max-w-48 text-center">
             <div className="transition-opacity transform duration-700 opacity-100 translate-y-0">
               <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-                {showCounters ? <Counter target={20} duration={commonDuration} /> : 0}
+                {showCounters ? (
+                  <Counter target={20} duration={commonDuration} />
+                ) : (
+                  0
+                )}
               </h2>
               <h2 className="font-poppins text-gray-400 text-md">
                 industry-leading operators in our fund
@@ -76,7 +79,11 @@ const About = () => {
           <div className="w-full max-w-48 text-center">
             <div className="transition-opacity transform duration-700 opacity-100 translate-y-0">
               <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-                {showCounters ? <Counter target={300} duration={commonDuration} /> : 0}
+                {showCounters ? (
+                  <Counter target={300} duration={commonDuration} />
+                ) : (
+                  0
+                )}
               </h2>
               <h2 className="font-poppins text-gray-400 text-md">
                 people employed by our investor companies
@@ -86,7 +93,11 @@ const About = () => {
           <div className="w-full max-w-48 text-center">
             <div className="transition-opacity transform duration-700 opacity-100 translate-y-0">
               <h2 className="font-lora text-gray-200 text-5xl md:text-7xl mb-4">
-                {showCounters ? <Counter target={70000} duration={commonDuration} /> : 0}
+                {showCounters ? (
+                  <Counter target={70000} duration={commonDuration} />
+                ) : (
+                  0
+                )}
               </h2>
               <h2 className="font-poppins text-gray-400 text-md">
                 newsletter audience through Gen She
@@ -109,40 +120,53 @@ const About = () => {
           </span>
           , or the end game.
         </p>
-        <img
-          src={map}
-          className="lg:w-80 w-72 md:w-64 lg:ml-10"
-        />
+        <img src={map} className="lg:w-80 w-72 md:w-64 lg:ml-10" />
       </div>
-      <div ref={industriesRef} className="mt-20 mb-20">
+      <div className="relative mt-20 mb-20">
         <h2 className="text-center font-lora text-gray-200 text-2xl md:text-3xl mb-12">
           Partner Industries
         </h2>
-        <div className="font-poppins text-xl mx-4 sm:mx-8 md:mx-16 lg:mx-20 grid grid-cols-1 text-gray-300 border-gray-500 border-t border-b md:grid-cols-3">
-          <div className={`text-center md:border-r border-gray-300 border-opacity-30 py-10`}>
-            <ul className={`${showIndustries[0] ? 'animate-floatUp' : 'opacity-0'}`}>
-              <li>Agriculture</li>
-              <li>Education</li>
-              <li>Healthcare</li>
-              <li>Home Services</li>
-            </ul>
+        <div ref={industriesRef} className="relative">
+          <div className="absolute top-0 left-0 w-full border-t border-gray-300 border-opacity-30"></div>
+          <div className="font-poppins text-xl mx-4 sm:mx-8 md:mx-16 lg:mx-20 grid grid-cols-1 text-gray-300 md:grid-cols-3">
+            <div className="text-center md:border-r border-gray-300 border-opacity-30 py-10 relative">
+              <ul
+                className={`${
+                  showIndustries[0] ? "animate-floatUp" : "opacity-0"
+                }`}
+              >
+                <li>Agriculture</li>
+                <li>Education</li>
+                <li>Healthcare</li>
+                <li>Home Services</li>
+              </ul>
+            </div>
+            <div className="text-center md:border-r border-gray-300 border-opacity-30 py-10 relative">
+              <ul
+                className={` ${
+                  showIndustries[1] ? "animate-floatUp" : "opacity-0"
+                }`}
+              >
+                <li>Legal</li>
+                <li>Logistics</li>
+                <li>Manufacturing</li>
+                <li>Marketplaces</li>
+              </ul>
+            </div>
+            <div className="text-center py-10 relative">
+              <ul
+                className={`${
+                  showIndustries[2] ? "animate-floatUp" : "opacity-0"
+                }`}
+              >
+                <li>Mobility</li>
+                <li>Production</li>
+                <li>Real Estate</li>
+                <li>Supply Chain</li>
+              </ul>
+            </div>
           </div>
-          <div className={`text-center md:border-r border-gray-300 border-opacity-30 py-10`}>
-            <ul className={` ${showIndustries[1] ? 'animate-floatUp' : 'opacity-0'}`}>
-              <li>Legal</li>
-              <li>Logistics</li>
-              <li>Manufacturing</li>
-              <li>Marketplaces</li>
-            </ul>
-          </div>
-          <div className={`text-center py-10 ${showIndustries[2] ? 'animate-floatUp' : 'opacity-0'}`}>
-            <ul>
-              <li>Mobility</li>
-              <li>Production</li>
-              <li>Real Estate</li>
-              <li>Supply Chain</li>
-            </ul>
-          </div>
+          <div className="absolute bottom-0 left-0 w-full border-b border-gray-300 border-opacity-30"></div>
         </div>
       </div>
     </div>

@@ -13,15 +13,13 @@ function App() {
     <div className="relative">
       {/* <ParticleEffect /> */}
       <div className="bg-blue-gray relative">
-        <div className="absolute top-0 bottom-0 left-4 sm:left-8 md:left-16 lg:left-20 w-px bg-gray-300 opacity-30"></div>
-        <div className="absolute top-0 bottom-0 right-4 sm:right-8 md:right-16 lg:right-20 w-px bg-gray-300 opacity-30"></div>
         <div className="relative">
-        <Navbar />
-        <InteractiveLogo />
+          <Navbar />
+          <InteractiveLogo />
           <section id="home">
             <Header />
           </section>
-          <section id="about">
+          <section id="about" className="bg-custom-blue-5">
             <About />
           </section>
           <section id="contact">
@@ -30,6 +28,8 @@ function App() {
         </div>
         <Footer />
       </div>
+      <div className="absolute top-0 bottom-0 left-4 sm:left-8 md:left-16 lg:left-20 w-px bg-gray-300 opacity-30"></div>
+      <div className="absolute top-0 bottom-0 right-4 sm:right-8 md:right-16 lg:right-20 w-px bg-gray-300 opacity-30"></div>
     </div>
   );
 }

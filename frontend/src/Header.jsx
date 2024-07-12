@@ -108,9 +108,9 @@ const Header = () => {
   ];
 
   return (
-    <div className="h-full mb-48">
+    <div className="h-full">
       <div className="mx-10 md:mt-10 md:mb-4 md:mx-20">
-      {/* <InteractiveLogo /> */}
+        {/* <InteractiveLogo /> */}
         <h1
           ref={(el) => (headersRef.current[0] = el)}
           className="font-lora text-gray-300 text-center text-4xl md:mx-10 mx-5 md:text-5xl opacity-0 mb-28 pt-14 animate-floatUp"
@@ -134,28 +134,31 @@ const Header = () => {
         </h2>
         <h3
           ref={(el) => (headersRef.current[2] = el)}
-          className="font-poppins border-t border-gray-300 lg:mx-72 md:mx-36 mx-10 text-gray-400 text-xl pt-4 opacity-0 animate-floatUp"
-          style={{ animationDelay: "0.5s" }} // Same delay as h2
+          className="font-poppins border-t border-gray-300 border-opacity-30 lg:mx-72 md:mx-36 mx-10 text-gray-400 text-xl pt-4 opacity-0 animate-floatUp"
+          style={{ animationDelay: "0.5s" }}
         >
           {subPhrases[currentPhraseIndex]}
         </h3>
       </div>
-      <div
-        className={`border-t border-b border-gray-500 overflow-x-scroll mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-20 flex items-center transition-opacity duration-1000 ${
-          showLogos ? "opacity-100" : "opacity-0"
-        }`}
-        id="portfolio"
-      >
-        <div className="flex">
-          {logos.map((logo, index) => (
-            <LogoBox
-              key={index}
-              href={logo.href}
-              src={logo.src}
-              alt={logo.alt}
-              height={logo.height}
-            />
-          ))}
+      <div className="border-t border-b border-gray-300 border-opacity-30">
+        <div
+          className={`overflow-x-auto mx-4 sm:mx-8 md:mx-16 lg:mx-20 flex items-center transition-opacity duration-1000 ${
+            showLogos ? "opacity-100" : "opacity-0"
+          }`}
+          id="portfolio"
+        >
+          <div className="flex">
+            {logos.map((logo, index) => (
+              <LogoBox
+                key={index}
+                href={logo.href}
+                src={logo.src}
+                alt={logo.alt}
+                height={logo.height}
+                className={index === logos.length - 1 ? "" : "border-r border-gray-300 border-opacity-30"}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
