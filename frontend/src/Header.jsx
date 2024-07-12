@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import Counter from "./Counter";
 import "./index.css";
-import InteractiveLogo from "./InteractiveLogo";
-import PortfolioScroll from "./PortfolioScroll";
+import image1 from "./assets/company_logos/aster_logo.svg";
+import image2 from "./assets/company_logos/daisy_logo.png";
+import image3 from "./assets/company_logos/livvy_logo.svg";
+import image4 from "./assets/company_logos/odynn_logo.svg";
+import image5 from "./assets/company_logos/splash_logo.png";
+import LogoBox from "./LogoBox";
 
 const Header = () => {
   const headersRef = useRef([]);
@@ -23,6 +26,7 @@ const Header = () => {
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [showLogos, setShowLogos] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -62,6 +66,47 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isFading && currentPhraseIndex === 0) {
+      setTimeout(() => {
+        setShowLogos(true);
+      }, 1000);
+    }
+  }, [isFading, currentPhraseIndex]);
+
+  const logos = [
+    {
+      src: image1,
+      alt: "Image 1",
+      href: "https://www.astercare.com/",
+      height: "h-8",
+    },
+    {
+      src: image2,
+      alt: "Image 2",
+      href: "https://daisyco.com/",
+      height: "h-16",
+    },
+    {
+      src: image3,
+      alt: "Image 3",
+      href: "https://www.bylivvy.com/",
+      height: "h-14",
+    },
+    {
+      src: image4,
+      alt: "Image 4",
+      href: "https://www.odynn.com/",
+      height: "h-16",
+    },
+    {
+      src: image5,
+      alt: "Image 5",
+      href: "https://splashventures.com/",
+      height: "h-14",
+    },
+  ];
+
   return (
     <div className="h-full mb-48">
       <div className="mx-10 md:mt-10 md:mb-4 md:mx-20">
@@ -90,12 +135,29 @@ const Header = () => {
         <h3
           ref={(el) => (headersRef.current[2] = el)}
           className="font-poppins border-t border-gray-300 lg:mx-72 md:mx-36 mx-10 text-gray-400 text-xl pt-4 opacity-0 animate-floatUp"
-          style={{ animationDelay: "1s" }}
+          style={{ animationDelay: "0.5s" }} // Same delay as h2
         >
           {subPhrases[currentPhraseIndex]}
         </h3>
       </div>
-      <PortfolioScroll />
+      <div
+        className={`border-t border-b border-gray-500 overflow-x-scroll mx-4 sm:mx-8 md:mx-16 lg:mx-20 mb-20 flex items-center transition-opacity duration-1000 ${
+          showLogos ? "opacity-100" : "opacity-0"
+        }`}
+        id="portfolio"
+      >
+        <div className="flex">
+          {logos.map((logo, index) => (
+            <LogoBox
+              key={index}
+              href={logo.href}
+              src={logo.src}
+              alt={logo.alt}
+              height={logo.height}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

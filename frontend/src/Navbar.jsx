@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import logo from "./assets/logo_nowords.png";
-import InteractiveLogo from "./InteractiveLogo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,32 +23,6 @@ const Navbar = () => {
     });
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-floatUp");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    menuItemsRef.current.forEach((el, index) => {
-      if (el && !el.classList.contains("lg:hidden")) {
-        setTimeout(() => {
-          observer.observe(el);
-        }, index * 200); // delay to make them appear one after the other
-      }
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <nav
       id="navbar"
@@ -64,12 +37,12 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className="h-10 w-10 mr-2 opacity-0 hover:text-accent-blue"
+                className="h-10 w-10 mr-2 hover:text-accent-blue"
                 ref={(el) => (menuItemsRef.current[0] = el)}
               />
               <a
                 href="#home"
-                className="font-poppins text-gray-200 hover:text-accent-blue text-4xl opacity-0 font-bold"
+                className="font-poppins text-gray-200 hover:text-accent-blue text-4xl font-bold"
                 ref={(el) => (menuItemsRef.current[1] = el)}
               >
                 Y&Z
@@ -81,7 +54,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[2] = el)}
               href="#mission"
               onClick={(event) => scrollToSection(event, "#mission")}
-              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0 hover:animate-translateUp"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md"
             >
               MISSION
             </a>
@@ -89,7 +62,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[3] = el)}
               href="#portfolio"
               onClick={(event) => scrollToSection(event, "#portfolio")}
-              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md"
             >
               PORTFOLIO
             </a>
@@ -97,7 +70,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[4] = el)}
               href="#about"
               onClick={(event) => scrollToSection(event, "#about")}
-              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md"
             >
               ABOUT
             </a>
@@ -105,7 +78,7 @@ const Navbar = () => {
               ref={(el) => (menuItemsRef.current[5] = el)}
               href="#contact"
               onClick={(event) => scrollToSection(event, "#contact")}
-              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md opacity-0"
+              className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md"
             >
               CONTACT
             </a>
