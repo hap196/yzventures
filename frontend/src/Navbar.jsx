@@ -87,7 +87,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-gray-800 focus:outline-none focus:text-gray-800 px-4"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-accent-blue focus:outline-none focus:text-gray-300 px-4"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -133,28 +133,28 @@ const Navbar = () => {
             <a
               href="#mission"
               onClick={(event) => scrollToSection(event, "#mission")}
-              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-300 hover:text-accent-blue hover:underline hover:underline-offset-8"
             >
               MISSION
             </a>
             <a
               href="#portfolio"
               onClick={(event) => scrollToSection(event, "#portfolio")}
-              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-300 hover:text-accent-blue hover:underline hover:underline-offset-8"
             >
               PORTFOLIO
             </a>
             <a
               href="#about"
               onClick={(event) => scrollToSection(event, "#about")}
-              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-300 hover:text-accent-blue hover:underline hover:underline-offset-8"
             >
               ABOUT
             </a>
             <a
               href="#contact"
               onClick={(event) => scrollToSection(event, "#contact")}
-              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-800 hover:text-gray-300"
+              className="block px-3 py-2 rounded-md text-base font-poppins text-xl text-center text-gray-300 hover:text-accent-blue hover:underline hover:underline-offset-8"
             >
               CONTACT
             </a>
