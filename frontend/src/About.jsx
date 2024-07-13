@@ -118,7 +118,7 @@ const About = () => {
             {" "}
             supporting investments to the final stages
           </span>
-          , or the end game.
+          .
         </p>
         <img src={map} className="lg:w-80 w-72 md:w-64 lg:ml-10" />
       </div>
