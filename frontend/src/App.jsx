@@ -12,14 +12,14 @@ function App() {
   return (
     <div className="relative">
       {/* <ParticleEffect /> */}
-      <div className="bg-blue-gray relative">
+      <div className="bg-gradient-gray-blue relative">
         <div className="relative">
           <Navbar />
           <InteractiveLogo />
           <section id="home">
             <Header />
           </section>
-          <section id="about" className="bg-custom-blue-5">
+          <section id="about" className="">
             <About />
           </section>
           <section id="contact">

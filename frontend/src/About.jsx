@@ -60,7 +60,7 @@ const About = () => {
       <h2 className="text-center font-lora text-gray-200 text-2xl md:text-3xl mb-16">
         About us
       </h2>
-      <div ref={countersRef}>
+      {/* <div ref={countersRef}>
         <div className="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-20 mb-24 mx-10 md:mx-32">
           <div className="w-full max-w-48 text-center">
             <div className="transition-opacity transform duration-700 opacity-100 translate-y-0">
@@ -105,7 +105,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col lg:flex-row justify-center items-center max-w-3xl lg:mx-auto mx-10 mb-20 mt-4 md:mt-2 mb-4 md:mb-40">
         <p className="font-lora text-gray-300 md:text-xl text-lg text-center lg:text-left lg:mb-0 md:mb-20 mb-20 max-w-xl lg:mr-10">
           Y&Z Ventures is a Los Angeles based{" "}
