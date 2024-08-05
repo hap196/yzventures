@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "./Navbar";
 import Header from "./Header";
 import About from "./About";
@@ -12,6 +13,11 @@ function App() {
   return (
     <div className="relative">
       {/* <ParticleEffect /> */}
+      <Helmet>
+        <title>Y&Z Ventures</title>
+        <meta name="description" content="Where capital investment has community impact" />
+        <meta name="keywords" content="Y&Z, ventures, venture capital, investment" />
+      </Helmet>
       <div className="bg-gradient-gray-blue relative">
         <div className="relative">
           <Navbar />
