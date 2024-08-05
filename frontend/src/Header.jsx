@@ -14,14 +14,12 @@ const Header = () => {
     "Unique Expertise and Network in M&A",
     "Represent Successful Operators",
     "Support Community",
-    "Ensure Investors Create Value",
   ];
 
   const subPhrases = [
     "Y&Z is dedicated to supporting investments to the final stages, or the Y&Z",
-    "Y&Z invests on behalf of successful operators across legacy sectors",
+    "Y&Z invests on behalf of successful operators across legacy sectors (see partner industries)",
     "Y&Z invests on behalf of first generation and immigrant entrepreneurial families",
-    "Y&Z invests in industries where our investors offer a unique expertise (see partner industries)",
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
