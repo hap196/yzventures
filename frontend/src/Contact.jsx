@@ -21,8 +21,8 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_7d7t0ne',
-      'template_ckq9bmn',
+      'service_imkt9cl',
+      'template_hbhq78t',
       e.target,
       'EGxbaD8PGrPd88r1z'
     ).then((result) => {
