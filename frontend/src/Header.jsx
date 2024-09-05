@@ -138,7 +138,7 @@ const Header = () => {
           {subPhrases[currentPhraseIndex]}
         </h3>
       </div>
-      <div className="border-t border-b border-gray-300 border-opacity-30">
+      {/* <div className="border-t border-b border-gray-300 border-opacity-30">
         <div
           className={`overflow-x-auto mx-4 sm:mx-8 md:mx-16 lg:mx-20 flex items-center transition-opacity duration-1000 ${
             showLogos ? "opacity-100" : "opacity-0"
@@ -158,7 +158,7 @@ const Header = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
