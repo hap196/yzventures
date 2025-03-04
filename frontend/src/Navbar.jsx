@@ -58,14 +58,14 @@ const Navbar = () => {
             >
               MISSION
             </a>
-            <a
+            {/* <a
               ref={(el) => (menuItemsRef.current[3] = el)}
               href="#portfolio"
               onClick={(event) => scrollToSection(event, "#portfolio")}
               className="font-poppins text-gray-200 hover:text-accent-blue hover:underline hover:underline-offset-8 text-md"
             >
               PORTFOLIO
-            </a>
+            </a> */}
             <a
               ref={(el) => (menuItemsRef.current[4] = el)}
               href="#about"
