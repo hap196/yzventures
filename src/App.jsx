@@ -5,18 +5,22 @@ import Header from "./Header";
 import About from "./About";
 import Contact from "./Contact";
 import InteractiveLogo from "./InteractiveLogo";
-// import ParticleEffect from "./ParticleEffect";
 import "./App.css";
 import Footer from "./Footer";
 
 function App() {
   return (
     <div className="relative">
-      {/* <ParticleEffect /> */}
       <Helmet>
         <title>Y&Z Ventures</title>
-        <meta name="description" content="Where capital investment has community impact" />
-        <meta name="keywords" content="Y&Z, ventures, venture capital, investment" />
+        <meta
+          name="description"
+          content="Where capital investment has community impact"
+        />
+        <meta
+          name="keywords"
+          content="Y&Z, ventures, venture capital, investment"
+        />
       </Helmet>
       <div className="bg-gradient-gray-blue relative">
         <div className="relative">

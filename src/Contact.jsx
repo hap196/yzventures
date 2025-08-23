@@ -1,41 +1,46 @@
-import React, { useState } from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
-import emailjs from 'emailjs-com';
+import React, { useState } from "react";
+import { FaPaperPlane } from "react-icons/fa";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'service_imkt9cl',
-      'template_hbhq78t',
-      e.target,
-      'EGxbaD8PGrPd88r1z'
-    ).then((result) => {
-      alert('Email sent successfully!');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: ''
-      });
-    }, (error) => {
-      alert('Error sending email.');
-    });
+    emailjs
+      .sendForm(
+        "service_imkt9cl",
+        "template_hbhq78t",
+        e.target,
+        "EGxbaD8PGrPd88r1z"
+      )
+      .then(
+        (result) => {
+          alert("Email sent successfully!");
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          alert("Error sending email.");
+        }
+      );
   };
 
   return (
@@ -46,7 +51,10 @@ const Contact = () => {
         </h2>
         <form className="px-16 lg:px-4 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="firstName">
+            <label
+              className="block text-gray-300 text-md font-poppins mb-2"
+              htmlFor="firstName"
+            >
               First Name
             </label>
             <input
@@ -60,7 +68,10 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="lastName">
+            <label
+              className="block text-gray-300 text-md font-poppins mb-2"
+              htmlFor="lastName"
+            >
               Last Name
             </label>
             <input
@@ -74,7 +85,10 @@ const Contact = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="email">
+            <label
+              className="block text-gray-300 text-md font-poppins mb-2"
+              htmlFor="email"
+            >
               Email
             </label>
             <input
@@ -88,7 +102,10 @@ const Contact = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-300 text-md font-poppins mb-2" htmlFor="message">
+            <label
+              className="block text-gray-300 text-md font-poppins mb-2"
+              htmlFor="message"
+            >
               Message
             </label>
             <textarea
