@@ -21,6 +21,15 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @keyframes expandBorder {
   from {
     border-width: 0 0 0 0;
